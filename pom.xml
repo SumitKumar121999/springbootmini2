@@ -45,7 +45,7 @@
                     <verbose>true</verbose>
                     <images>
                         <image>
-                            <name>SumitKumar121999/main</name>
+                            <name>sumitkumar121999/main:latest</name>
                             <build>
                                 <assembly>
                                     <descriptorRef>artifact</descriptorRef>
