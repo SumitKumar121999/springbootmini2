@@ -48,7 +48,8 @@
                             <name>sumitkumar121999/main:latest</name>
                             <build>
                                 <dockerFileDir>${project.basedir}</dockerFileDir>
-                                <dockerFile>${project.basedir}/Dockerfile</dockerFile>
+                                <!-- Relative path from dockerFileDir -->
+                                <dockerFile>Dockerfile</dockerFile>
                                 <assembly>
                                     <descriptorRef>artifact</descriptorRef>
                                 </assembly>
