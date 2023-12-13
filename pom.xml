@@ -35,17 +35,25 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Dockerfile Maven Plugin -->
+            <!-- Fabric8 Docker Maven Plugin -->
             <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.4.13</version>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.40.3</version>
                 <configuration>
-                    <repository>${project.artifactId}</repository>
-                    <tag>${project.version}</tag>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
+                    <verbose>true</verbose>
+                    <images>
+                        <image>
+                            <name>SumitKumar121999/main</name>
+                            <build>
+                                <assembly>
+                                    <descriptorRef>artifact</descriptorRef>
+                                </assembly>
+                                <dockerFile>Dockerfile</dockerFile>
+                                <tags>latest</tags>
+                            </build>
+                        </image>
+                    </images>
                 </configuration>
             </plugin>
         </plugins>
