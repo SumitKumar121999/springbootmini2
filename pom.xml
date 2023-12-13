@@ -45,7 +45,7 @@
                     <verbose>true</verbose>
                     <images>
                         <image>
-                            <name>sumitkumar121999/main:latest</name>
+                            <name>sksumit1999/dockertask:v2</name>
                             <build>
                                 <dockerFileDir>${project.basedir}</dockerFileDir>
                                 <!-- Relative path from dockerFileDir -->
