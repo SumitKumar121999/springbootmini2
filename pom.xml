@@ -41,6 +41,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.40.3</version>
                 <configuration>
+                    <dockerHost>unix:///var/run/docker.sock</dockerHost>
                     <verbose>true</verbose>
                     <images>
                         <image>
